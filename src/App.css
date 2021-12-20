@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.signin-content{
+
+    padding:150px;
+
+    background-color: aliceblue;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+input{
+    width: 40%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 12px 30px;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+.signin-image{
+
+}
+.signin-image{
+    bottom: 60px;
+    margin-left: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position:absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.signup-form,
+.signup-image,
+.signin-form,
+.signin-image{
+    width: auto;
+}
+.form-title{
+    margin-bottom: 33px;
+    font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-submit{
+    display: inline-block;
+    background: #6dabe4;
+    color:#fff;
+    border-bottom: none;
+    width: auto;
 }
+label{
+    position: absolute;
+    padding: 9px;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signup-image-link{
+    margin-top: 20px;
+    font-size: 20px;
+   
+    color: black;
 }
