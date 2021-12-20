@@ -69,7 +69,7 @@ const SignUp = () => {
                             </div>
                                 <div className="signup-image">
                                     <figure>
-                                        <img src alt="" srcset=""/>
+                                    <img src="assets/img/about/2.png" alt="" />
                                     </figure>
                                     <NavLink to="/" className="signup-image-link"> Khách hàng đã có tài khoản ? </NavLink>
                                 </div>

@@ -5,7 +5,11 @@
     background-color: aliceblue;
   
 }
-
+.signup-content{
+    padding: 150px;
+    background-color: aliceblue;
+  
+}
 
 input{
     width: 40%;
@@ -16,8 +20,15 @@ input{
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
-.signin-image{
-
+.signup-image{
+    bottom: -40px;
+    margin-left: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position:absolute;
+  
 }
 .signin-image{
     bottom: 60px;
@@ -59,3 +70,4 @@ label{
    
     color: black;
 }
+
