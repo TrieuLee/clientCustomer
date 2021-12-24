@@ -71,3 +71,15 @@ label{
     color: black;
 }
 
+.container_1{
+    display: flex;
+    justify-content: space-around;
+}
+.personInfo{
+    border: 1px solid black;
+    width: 500px;
+}
+.reservationInfo{
+    border:1px solid black;
+    width:500px;
+}

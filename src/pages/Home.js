@@ -82,8 +82,8 @@ export default function Home() {
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="slider_text text-center">
-                                <h3>Life is Beautiful</h3>
-                                <p>Come, stay and enjoy your day</p>
+                                <h3>Hotel Del Luna</h3>
+                                <p>Your home away from home</p>
                             </div>
                         </div>
                     </div>
@@ -104,8 +104,8 @@ export default function Home() {
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="slider_text text-center">
-                                <h3>Life is Beautiful</h3>
-                                <p>Come, stay and enjoy your day</p>
+                            <h3>Hotel Del Luna</h3>
+                                <p>Your home away from home</p>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@ export default function Home() {
                 <div className="col-xl-7 col-lg-7">
                     <div className="about_thumb d-flex">
                         <div className="img_1">
-                            <img src="assets/img/about/about_1.png" alt="" style={{width: '294px', height: '400px',}}/>
+                            <img src="assets/img/about/1.png" alt="" style={{width: '294px', height: '400px',}}/>
                         </div>
                         <div className="img_2">
                             <img src="assets/img/about/about_2.png" alt=""/>

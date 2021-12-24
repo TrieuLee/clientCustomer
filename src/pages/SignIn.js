@@ -11,7 +11,6 @@ const SignIn = () => {
                     <div className="signin-image">
                     
                         <img src="assets/img/about/2.png" alt="" />
-                       
                         <NavLink to="/signup" className="signup-image-link"> Khách hàng mới ? </NavLink>
                     </div>
 
