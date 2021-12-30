@@ -1,38 +1,56 @@
 .signin-content{
-
-    padding:150px;
-
-    background-color: aliceblue;
-  
+    
+    padding: 120px;
+    background-color: lemonchiffon; 
+    border-radius: 20px; 
 }
+
+.signin-image{
+    bottom: 80px;
+    margin-left: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position:absolute;
+}
+
 .signup-content{
-    padding: 150px;
-    background-color: aliceblue;
-  
+    padding: 12px;
+    background-color: lemonchiffon; 
+    border-radius: 20px;
 }
+.signup-form{
+    margin-left: 100px;
+    padding: 50px;
+}
+.signin-form{
+    margin-left: 50px;
 
-input{
+}
+.inputForm{
     width: 40%;
     display: block;
     border: none;
     border-bottom: 1px solid #999;
     padding: 12px 30px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Arial", sans-serif;
     box-sizing: border-box;
+    background: none;
+}
+.inputForm1{
+    width: 99%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 12px 30px;
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+    background: none;
 }
 .signup-image{
-    bottom: -40px;
-    margin-left: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position:absolute;
-  
-}
-.signin-image{
-    bottom: 60px;
-    margin-left: 650px;
+    top: 200px;
+    margin-left: 820px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,34 +59,51 @@ input{
 }
 
 
-.signup-form,
-.signup-image,
-.signin-form,
-.signin-image{
-    width: auto;
-}
 .form-title{
     margin-bottom: 33px;
     font-weight: bold;
 }
-
+.form-title1{
+    background-color: rgb(205, 166, 85);
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px;
+}
 .form-submit{
     display: inline-block;
-    background: #6dabe4;
+    background: rgb(205, 166, 85);
     color:#fff;
-    border-bottom: none;
+    border: none;
     width: auto;
+    padding: 10px;
+    margin-top  : 15px;
+    
+}
+
+.form-submit1{
+    display: inline-block;
+    background: rgb(205, 166, 85);
+    color:#fff;
+    border: none;
+    width: auto;
+    padding: 10px;
+    margin-top  : 55px;
+    
 }
 label{
     position: absolute;
-    padding: 9px;
+    padding: 14px;
 
 }
 .signup-image-link{
     margin-top: 20px;
     font-size: 20px;
-   
     color: black;
+    text-decoration: none;
 }
 
 .container_1{
@@ -82,4 +117,51 @@ label{
 .reservationInfo{
     border:1px solid black;
     width:500px;
+}
+
+::placeholder{
+    color: black;
+}
+
+
+.reservation-content{
+    background-color: lemonchiffon; 
+    border-radius: 20px; 
+    padding: 70px;
+}
+.form-flex{
+    display: flex;
+    justify-content: space-around   ;
+}
+.reservation-form{
+    border: 1px solid black;
+}
+.info-form{
+    border: 1px solid black;
+    
+}
+.pickDate{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+}
+.pickDate1{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 36px;
+}
+.lblTitle{
+    color: black;
+}
+.slcRoom{
+    margin-left: 30px;
+}
+.slcRoom1{
+    margin-left: 60px;
+}
+.form-group1{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    
 }

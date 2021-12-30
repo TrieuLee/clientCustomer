@@ -1,14 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Menu from './Menu';
 
 const SignUp = () => {
     return (
         <>
+            <Menu/>
             <section className="signup">
-                <div className="container mt-5">
+                <div className="container mt-5 mb-5">
                     <div className="signup-content">
                         <div className="signup-form">
-                            <h2 className="form-title">Đăng kí</h2>
+                            <h2 className="form-title">Khách hàng mới   </h2>
                             <form className="register-form" id="register-form">
                                        {/* Họ tên */}
                                 <div className="form-group">
@@ -16,8 +18,8 @@ const SignUp = () => {
                                         <i class="zmdi zmdi-account material-icons-name"></i>
 
                                     </label>
-                                    <input type="text" name="name" id="name" autoComplete="off"
-                                        placeholder="Your name"
+                                    <input  className="inputForm" type="text" name="name" id="name" autoComplete="off"
+                                        placeholder="Họ tên khách hàng"
                                     />
                                 </div>
                                        {/* Email */}
@@ -26,7 +28,7 @@ const SignUp = () => {
                                         <i class="zmdi zmdi-email material-icons-name"></i>
 
                                     </label>
-                                    <input type="email" name="email" id="email" autoComplete="off"
+                                    <input  className="inputForm" type="email" name="email" id="email" autoComplete="off"
                                         placeholder="Email"
                                     />
                                 </div>
@@ -36,7 +38,7 @@ const SignUp = () => {
                                         <i class="zmdi zmdi-phone-in-talk material-icons-name"></i>
 
                                     </label>
-                                    <input type="number" name="phone" id="phone" autoComplete="off"
+                                    <input className="inputForm"  type="number" name="phone" id="phone" autoComplete="off"
                                         placeholder="Phone"
                                     />
                                 </div>
@@ -46,7 +48,7 @@ const SignUp = () => {
                                         <i class="zmdi zmdi-lock material-icons-name"></i>
 
                                     </label>
-                                    <input type="password" name="password" id="password" autoComplete="off"
+                                    <input  className="inputForm" type="password" name="password" id="password" autoComplete="off"
                                         placeholder="Mật khẩu"
                                     />
                                 </div>
@@ -56,13 +58,13 @@ const SignUp = () => {
                                         <i class="zmdi zmdi-lock material-icons-name"></i>
 
                                     </label>
-                                    <input type="password" name="cpassword" id="cpassword" autoComplete="off"
+                                    <input  className="inputForm"  type="password" name="cpassword" id="cpassword" autoComplete="off"
                                         placeholder="Xác nhận mật khẩu"
                                     />
                                 </div>
                                 <div className="form-group form-button">
                                     <input type ="submit" name="signup" id="signup" className="form-submit"
-                                        value="Register"
+                                        value="Đăng kí"
                                     />
                                 </div>
                             </form>
@@ -73,8 +75,6 @@ const SignUp = () => {
                                     </figure>
                                     <NavLink to="/" className="signup-image-link"> Khách hàng đã có tài khoản ? </NavLink>
                                 </div>
-                            
-                       
                     </div>
                 </div>
             </section>

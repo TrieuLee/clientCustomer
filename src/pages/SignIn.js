@@ -1,20 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Menu from './Menu';
 
 const SignIn = () => {
     return (
         <>
+        <Menu/>
+        
         <section className="sign-in">
                 <div className="container mt-5">
                     <div className="signin-content">
 
                     <div className="signin-image">
                     
-                        <img src="assets/img/about/2.png" alt="" />
+                        <img src="assets/img/about/3.png" alt="" />
                         <NavLink to="/signup" className="signup-image-link"> Khách hàng mới ? </NavLink>
                     </div>
 
-                        <div className="signup-form">
+                        <div className="signin-form">
                             <h2 className="form-title">Đăng nhập    </h2>
                             <form className="register-form" id="register-form">
                                        {/* Email */}
@@ -23,7 +26,7 @@ const SignIn = () => {
                                         <i class="zmdi zmdi-email material-icons-name"></i>
 
                                     </label>
-                                    <input type="email" name="email" id="email" autoComplete="off"
+                                    <input  className="inputForm" type="email" name="email" id="email" autoComplete="off"
                                         placeholder="Email"
                                     />
                                 </div>
@@ -34,7 +37,7 @@ const SignIn = () => {
                                         <i class="zmdi zmdi-lock material-icons-name"></i>
 
                                     </label>
-                                    <input type="password" name="password" id="password" autoComplete="off"
+                                    <input  className="inputForm" type="password" name="password" id="password" autoComplete="off"
                                         placeholder="Mật khẩu"
                                     />
                                 </div>

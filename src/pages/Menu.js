@@ -14,8 +14,11 @@ const Menu = () => {
 
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav ms-auto">
-      <li className="nav-item active">
-        <NavLink className="nav-link active" style={{color:'white'}} to="/">Đăng nhập <span className="sr-only">(current)</span></NavLink>
+    <li className="nav-item active">
+        <NavLink className="nav-link active" style={{color:'white'}} to="/">Về trang chủ<span className="sr-only">(current)</span></NavLink>
+      </li>
+      <li className="nav-item ">
+        <NavLink className="nav-link active" style={{color:'white'}} to="/signin">Đăng nhập <span className="sr-only">(current)</span></NavLink>
       </li>
       <li className="nav-item">
         <NavLink className="nav-link"  style={{color:'white'}} to="/signup">Đăng kí</NavLink>

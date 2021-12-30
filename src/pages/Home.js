@@ -1,6 +1,8 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Menu from './Menu';
+import { Link } from 'react-router-dom';
+import SignIn from './SignIn';
 export default function Home() {
     return (
         <>
@@ -51,7 +53,7 @@ export default function Home() {
                                     </ul>
                                 </div>
                                 <div className="book_btn d-none d-lg-block">
-                                    <a className="popup-with-form" href="/menu">Đăng nhập</a>
+                                    <Link to ="/signin" element={ <SignIn/>}>Đăng nhập</Link>
                                 </div>
                             </div>
                         </div>
@@ -64,13 +66,13 @@ export default function Home() {
         </div>
     </header>
 
-        <div class="slider_area">
-        <div class="slider_active owl-carousel owl-loaded owl-drag">
-        <div class="owl-stage-outer"><div class="owl-stage" style={{transform:' translate3d(-4557px, 0px, 0px)', transition: 'all 0.8s ease 0s', width: '9114px'}}><div class="owl-item cloned" style={{width: '1519px'}}><div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="slider_text text-center">
+        <div className="slider_area">
+        <div className="slider_active owl-carousel owl-loaded owl-drag">
+        <div className="owl-stage-outer"><div class="owl-stage" style={{transform:' translate3d(-4557px, 0px, 0px)', transition: 'all 0.8s ease 0s', width: '9114px'}}><div class="owl-item cloned" style={{width: '1519px'}}><div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xl-12">
+                            <div className="slider_text text-center">
                                 <h3>Hotel Del Luna</h3>
                                 <p>Your home away from home</p>
                             </div>
