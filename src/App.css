@@ -165,3 +165,19 @@ label{
     padding: 10px;
     
 }
+.service-content{
+    background-color: lemonchiffon; 
+    border-radius: 20px; 
+    padding: 70px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }

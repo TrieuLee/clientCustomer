@@ -26,6 +26,9 @@ const Menu = () => {
       <li className="nav-item">
         <NavLink className="nav-link"  style={{color:'white'}} to="/reservation">Đặt phòng</NavLink>
       </li>
+      <li className="nav-item">
+        <NavLink className="nav-link"  style={{color:'white'}} to="/service">Dịch vụ</NavLink>
+      </li>
     </ul>
     
   </div>

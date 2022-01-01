@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import Reservation from './pages/Reservation';
+import Service from './pages/Service';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
             <Route path="/signin"> <SignIn/> </Route>
             <Route path="/signup"> <SignUp/> </Route>
             <Route path="/reservation"><Reservation/> </Route>
-
+            <Route path="/service"><Service/> </Route>
           </Switch>
         
       </BrowserRouter>
