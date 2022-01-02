@@ -1,9 +1,22 @@
-import React from 'react'
-
-import Menu from './Menu';
+import React, {useContext } from 'react';
+import UserContext from '../context/UserContext';
+import { NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import SignIn from './SignIn';
+import Axios from 'axios';
+import { useHistory } from 'react-router-dom';
 export default function Home() {
+
+
+    const {getUser, user} = useContext(UserContext);
+    const history = useHistory();
+
+    async function logOut(){
+        await Axios.get("http://localhost:5000/customer/logOut");
+        await getUser();
+        history.push("/"); 
+    }
+
     return (
         <>
 <header>
@@ -16,10 +29,28 @@ export default function Home() {
                                 <nav>
                                     <ul id="navigation">
                                         <li><a className="active" href="index.html">Trang chủ</a></li>
-                                        <li><a href="rooms.html">Phòng</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                    
-                                        
+                                        <li><a href="/bookRoom">Đặt phòng</a></li>
+                                        <li><a href="about.html">Đặt dịch vụ</a></li>
+                                        {user !== null &&
+                                        <>                                                                             
+                                        <li>
+                                            <NavDropdown
+                                                id="nav-dropdown-dark-example"
+                                                title= {"Thanh toán"}
+                                                menuVariant="dark"
+                                                >
+                                                    <NavDropdown.Item href="/">
+                                                        Hóa Đơn Đặt Phòng
+                                                    </NavDropdown.Item>
+                                                    <NavDropdown.Item href="/">Hóa đơn dịch vụ</NavDropdown.Item>
+                                                    <NavDropdown.Divider />
+                                                    <NavDropdown.Item >Trả phòng</NavDropdown.Item>
+                                                </NavDropdown>    
+                                        </li>   
+                                       
+                                        </>                                    
+                                    }
+                                        <li><a href="about.html">Về chúng tôi</a></li>                                                                           
                                     </ul>
                                 </nav>
                             </div>
@@ -36,24 +67,29 @@ export default function Home() {
                                 <div className="socail_links">
                                     <ul>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="fa fa-facebook-square"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="fa fa-twitter"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <i className="fa fa-instagram"></i>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="book_btn d-none d-lg-block">
+                                    {user !==null? 
+                                       <Link to ="/signin" onClick={logOut} href="/" >Đăng Xuất</Link>
+                                    :
                                     <Link to ="/signin" element={ <SignIn/>}>Đăng nhập</Link>
+                                }
+                                    
                                 </div>
                             </div>
                         </div>
@@ -149,7 +185,7 @@ export default function Home() {
                         <p>Khách sạn Del Luna là khách sạn đạt tiêu chuẩn quốc tế hàng đầu tọa lạc ngay tại trung tâm
                         tài chính, thương mại và giải trí sầm uất của thành phố Hồ Chí Minh, cách Sân bay quốc tế Tân Sơn Nhất chỉ khoảng 8 km 
                         đường bộ.</p>
-                        <a href="#" className="line-button">Tìm hiểu thêm</a>
+                        <a href="/" className="line-button">Tìm hiểu thêm</a>
                     </div>
                 </div>
                 <div className="col-xl-7 col-lg-7">
@@ -186,7 +222,7 @@ export default function Home() {
                             <span>From $250/night</span>
                             <h3>Thường đơn</h3>
                         </div>
-                        <a href="#" className="line-button">Đặt phòng</a>
+                        <a href="/" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
@@ -198,7 +234,7 @@ export default function Home() {
                             <span>From $250/night</span>
                             <h3>Thường đôi</h3>
                         </div>
-                        <a href="#" className="line-button">Đặt phòng</a>
+                        <a href="/" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
@@ -210,7 +246,7 @@ export default function Home() {
                             <span>From $250/night</span>
                             <h3>VIP đơn</h3>
                         </div>
-                        <a href="#" className="line-button">Đặt phòng</a>
+                        <a href="/" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
@@ -222,7 +258,7 @@ export default function Home() {
                             <span>From $250/night</span>
                             <h3>VIP đôi</h3>
                         </div>
-                        <a href="#" className="line-button">Đặt phòng</a>
+                        <a href="/" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
@@ -258,10 +294,10 @@ export default function Home() {
                                 Navigation
                             </h3>
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Rooms</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">News</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/">Rooms</a></li>
+                                <li><a href="/">About</a></li>
+                                <li><a href="/">News</a></li>
                             </ul>
                         </div>
                     </div>
@@ -291,17 +327,17 @@ export default function Home() {
                         <div className="socail_links">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="/">
                                         <i className="fa fa-facebook-square"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/">
                                         <i className="fa fa-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="/">
                                         <i className="fa fa-instagram"></i>
                                     </a>
                                 </li>
@@ -327,7 +363,7 @@ export default function Home() {
                                         <input id="datepicker2" placeholder="Check out date"/>
                                     </div>
                                     <div className="col-xl-6">
-                                        <select className="form-select wide" id="default-select" className="">
+                                        <select className="form-select wide" id="default-select" >
                                             <option data-display="Adult">1</option>
                                             <option value="1">2</option>
                                             <option value="2">3</option>
@@ -335,7 +371,7 @@ export default function Home() {
                                         </select>
                                     </div>
                                     <div className="col-xl-6">
-                                        <select className="form-select wide" id="default-select" className="">
+                                        <select className="form-select wide" id="default-select" >
                                             <option data-display="Children">1</option>
                                             <option value="1">2</option>
                                             <option value="2">3</option>
@@ -343,7 +379,7 @@ export default function Home() {
                                         </select>
                                     </div>
                                     <div className="col-xl-12">
-                                        <select className="form-select wide" id="default-select" className="">
+                                        <select className="form-select wide" id="default-select" >
                                             <option data-display="Room type">Room type</option>
                                             <option value="1">Laxaries Rooms</option>
                                             <option value="2">Deluxe Room</option>

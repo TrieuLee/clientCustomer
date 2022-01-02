@@ -94,11 +94,6 @@
     margin-top  : 55px;
     
 }
-label{
-    position: absolute;
-    padding: 14px;
-
-}
 .signup-image-link{
     margin-top: 20px;
     font-size: 20px;
@@ -164,4 +159,31 @@ label{
     margin-bottom: 20px;
     padding: 10px;
     
+}
+.container-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.set-with-navbar{
+    width:6.5%;
+    transition: all 0.75s ease;
+}
+.set-with-navbar.open{
+    width: 19%;
+}
+.set-with-router{
+    width:93.5%;
+    transition: all 0.75s ease;
+}
+.set-with-router-open{
+    width:79.3%;
+}
+.navTitle{
+    background-color: black;
+    height: 60px;
+}
+body{
+    background-size:cover;
 }

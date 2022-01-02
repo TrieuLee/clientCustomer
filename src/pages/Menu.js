@@ -23,9 +23,6 @@ const Menu = () => {
       <li className="nav-item">
         <NavLink className="nav-link"  style={{color:'white'}} to="/signup">Đăng kí</NavLink>
       </li>
-      <li className="nav-item">
-        <NavLink className="nav-link"  style={{color:'white'}} to="/reservation">Đặt phòng</NavLink>
-      </li>
     </ul>
     
   </div>
