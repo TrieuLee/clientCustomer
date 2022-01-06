@@ -59,7 +59,7 @@ const SignUp = () => {
                             <form onSubmit={saveRoom} className="register-form" id="register-form">
                                        {/* Họ tên */}
                                 <div className="form-group">
-                                    <label htmlFor="name">
+                                    <label className="lblIcon"  htmlFor="name">
                                         <i class="zmdi zmdi-account material-icons-name"></i>
                                     </label>
                                     <input  className="inputForm" type="text" name="name" id="name" autoComplete="off"
@@ -70,7 +70,7 @@ const SignUp = () => {
                                 </div>
                                        {/* Email */}
                                 <div className="form-group">
-                                    <label htmlFor="email">
+                                    <label className="lblIcon" htmlFor="email">
                                         <i class="zmdi zmdi-email material-icons-name"></i>
 
                                     </label>
@@ -82,7 +82,7 @@ const SignUp = () => {
                                 </div>
                                    {/* Số điện thoại */}
                                 <div className="form-group">
-                                    <label htmlFor="phone">
+                                    <label className="lblIcon"  htmlFor="phone">
                                         <i class="zmdi zmdi-phone-in-talk material-icons-name"></i>
 
                                     </label>
@@ -94,7 +94,7 @@ const SignUp = () => {
                                 </div>
                                    {/* Địa chỉ */}
                                 <div className="form-group">
-                                    <label htmlFor="phone">
+                                    <label className="lblIcon" htmlFor="phone">
                                         <i class="zmdi zmdi-phone-in-talk material-icons-name"></i>
 
                                     </label>
@@ -106,8 +106,8 @@ const SignUp = () => {
                                 </div>
                                 {/* CMND */}
                                 <div className="form-group">
-                                    <label htmlFor="phone">
-                                        <i class="zmdi zmdi-phone-in-talk material-icons-name"></i>
+                                    <label className="lblIcon"  htmlFor="phone">
+                                        <i class="zmdi zmdi-info material-icons-name"></i>
 
                                     </label>
                                     <input className="inputForm"  type="text" name="phone" id="phone" autoComplete="off"
@@ -118,7 +118,7 @@ const SignUp = () => {
                                 </div>
                                        {/* Mật khẩu */}
                                 <div className="form-group">
-                                    <label htmlFor="password">
+                                    <label className="lblIcon" htmlFor="password">
                                         <i class="zmdi zmdi-lock material-icons-name"></i>
 
                                     </label>
@@ -130,7 +130,7 @@ const SignUp = () => {
                                 </div>
                                        {/* Xác nhận mật khẩu */}
                                 <div className="form-group">
-                                    <label htmlFor="cpassword">
+                                    <label className="lblIcon" htmlFor="cpassword">
                                         <i class="zmdi zmdi-lock material-icons-name"></i>
 
                                     </label>

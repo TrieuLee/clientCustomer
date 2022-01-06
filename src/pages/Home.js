@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import SignIn from './SignIn';
 import Axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import RoomList from '../component/BookRoom/roomList';
+
 export default function Home() {
-
-
     const {getUser, user} = useContext(UserContext);
     const history = useHistory();
 
@@ -50,7 +50,7 @@ export default function Home() {
                                        
                                         </>                                    
                                     }
-                                        <li><a href="about.html">Về chúng tôi</a></li>                                                                           
+                                        <li><button href="about.html" >Về chúng tôi</button></li>                                                                           
                                     </ul>
                                 </nav>
                             </div>
@@ -64,24 +64,15 @@ export default function Home() {
                         </div>
                         <div className="col-xl-5 col-lg-4 d-none d-lg-block">
                             <div className="book_room">
-                                <div className="socail_links">
-                                    <ul>
-                                        <li>
-                                            <a href="/">
-                                                <i className="fa fa-facebook-square"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/">
-                                                <i className="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/">
-                                                <i className="fa fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <div className="book_btn d-none d-lg-block">
+            
+                                    
+                                    {user !==null? 
+                                       <Link to ="/bookRoom" element={<RoomList/>} >Đặt phòng</Link>
+                                    :
+                                    <Link to ="/signup" element={ <SignIn />}>Tạo tài khoản</Link>
+                                }
+                                    
                                 </div>
                                 <div className="book_btn d-none d-lg-block">
                                     {user !==null? 

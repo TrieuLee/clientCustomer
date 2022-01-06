@@ -19,8 +19,7 @@ function Room({room,getRooms,editRoom}) {
             <td>{room.state?"Có Khách thuê":"Phòng trống"}</td>
             <td>{room.note}</td>
             <td>
-                <a onClick={() => editRoom(room)} href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <a onClick={deleteEmployee} href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                <a onClick={() => editRoom(room)} href="#editEmployeeModal" className="edit" data-toggle="modal"><i class="fas fa-concierge-bell"></i>Đặt phòng</a>
             </td>
         </tr>
         

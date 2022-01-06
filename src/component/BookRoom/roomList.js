@@ -75,11 +75,11 @@ function RoomList() {
 							<tr>
 								<th>Tầng</th>
 								<th>Số phòng</th>
-								<th>Giá Phòng</th>
-								<th>Loại Phòng</th>
+								<th>Giá phòng</th>
+								<th>Loại phòng</th>
 								<th>Tình trạng phòng</th>
 								<th>Ghi chú</th>
-								<th>ThaoTác</th>
+								<th>Thao tác</th>
 							</tr>
 						</thead>
 						<tbody>

@@ -94,6 +94,12 @@
     margin-top  : 55px;
     
 }
+.lblIcon{
+    position: absolute;
+    padding: 14px;
+    color: black;
+
+}
 .signup-image-link{
     margin-top: 20px;
     font-size: 20px;

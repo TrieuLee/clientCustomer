@@ -53,7 +53,7 @@ const SignIn = () => {
                                 )}
                             <form onSubmit={authLogin} className="register-form" id="register-form">
                                 <div className="form-group">
-                                    <label htmlFor="email">
+                                    <label className="lblIcon"  htmlFor="email">
                                         <i class="zmdi zmdi-email material-icons-name"></i>
                                     </label>
                                     <input  className="inputForm" type="email" name="email" id="email" autoComplete="off"
@@ -65,7 +65,7 @@ const SignIn = () => {
                                
                                        {/* Mật khẩu */}
                                 <div className="form-group">
-                                    <label htmlFor="password">
+                                    <label className="lblIcon"  htmlFor="password">
                                         <i class="zmdi zmdi-lock material-icons-name"></i>
 
                                     </label>

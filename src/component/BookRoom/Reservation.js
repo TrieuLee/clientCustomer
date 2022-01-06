@@ -81,7 +81,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                 <form className="re_form" >
                     {/* Họ tên khách hàng */}
                     <div className="form-group">
-                        <label htmlFor="name">
+                        <label className="lblIcon" htmlFor="name">
                         <i class="zmdi zmdi-account material-icons-name"></i>
 
                         </label>
@@ -94,7 +94,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                         
                     {/* Số điện thoại */}
                     <div className="form-group">
-                    <label htmlFor="phone">
+                    <label className="lblIcon"  htmlFor="phone">
                         <i class="zmdi zmdi-phone material-icons-name"></i>
 
                     </label>
@@ -107,7 +107,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                 
                 {/* Địa chỉ */}
                 <div className="form-group">
-                    <label htmlFor="phone">
+                    <label className="lblIcon" htmlFor="phone">
                         <i class="zmdi zmdi-pin material-icons-name"></i>
 
                     </label>
@@ -118,7 +118,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                     />
                 </div> 
                 <div className="form-group">
-                    <label htmlFor="name">
+                    <label className="lblIcon" htmlFor="name">
                         <i class="zmdi zmdi-info material-icons-name"></i>
 
                     </label>
@@ -129,7 +129,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                     />
                 </div>  
                 <div className="form-group">
-                    <label htmlFor="name">
+                    <label className="lblIcon" htmlFor="name">
                         <i class="zmdi zmdi-info material-icons-name"></i>
 
                     </label>
@@ -225,16 +225,19 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                         />
                     </div>
                                   
-                    <div className="form-group form-button">
-                        <input type ="submit" name="signup" id="signup" className="form-submit1"
-                            value="Đặt phòng"
-                        />
-                        <Button
-                            color="danger"
-                            outline
-                            type="button" onClick={closeRoom}>
-                            Thoát
-                        </Button>
+                   <div className='btn-confirm'>
+                    <Button
+                        type="submit"
+                        color="success"
+                        outline>
+                        Đặt phòng
+                    </Button>
+                    <Button
+                        color="danger"
+                        outline
+                        type="button" onClick={closeRoom}>
+                        Thoát
+                    </Button>
                     </div>
                     {errorMessage && (
                         <ErrorMessage

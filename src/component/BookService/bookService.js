@@ -157,10 +157,13 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                         className='roomInput'
                         />
                     </div>                              
-                    <div className="form-group form-button">
-                        <input type ="submit" name="signup" id="signup" className="form-submit1"
-                            value="Đặt dịch vụ"
-                        />
+                    <div className='btn-confirm'>
+                        <Button
+                            type="submit"
+                            color="success"
+                            outline>
+                            Tạo mới
+                        </Button>
                         <Button
                             color="danger"
                             outline
