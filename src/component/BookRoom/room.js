@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Axios from 'axios';
-
 function Room({room,getRooms,editRoom}) {
 
     async function deleteEmployee(){

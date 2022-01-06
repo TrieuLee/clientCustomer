@@ -176,7 +176,7 @@ table.table .avatar {
 	border: 1px solid rgb(205, 166, 85);
 	color: rgb(205, 166, 85);;
 }
-	
+
 .employee-post h2{
 	padding: 20px 40px;
 	background-color: black;
@@ -268,10 +268,19 @@ table.table .avatar {
     box-sizing: border-box;
     background: none;
 }
+label{
+	color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
 ::placeholder{
     color: black;
 }
-input, select{
+input, select {
 	width: 100%;
-	
+	padding: 5px;
+	font-size: 18px;
+}
+.th-bookRoom{
+	width: 30%;
 }

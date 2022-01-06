@@ -30,7 +30,7 @@ export default function Home() {
                                     <ul id="navigation">
                                         <li><a className="active" href="index.html">Trang chủ</a></li>
                                         <li><a href="/bookRoom">Đặt phòng</a></li>
-                                        <li><a href="about.html">Đặt dịch vụ</a></li>
+                                        <li><a href="/bookService">Đặt dịch vụ</a></li>
                                         {user !== null &&
                                         <>                                                                             
                                         <li>
@@ -39,10 +39,10 @@ export default function Home() {
                                                 title= {"Thanh toán"}
                                                 menuVariant="dark"
                                                 >
-                                                    <NavDropdown.Item href="/">
+                                                    <NavDropdown.Item href="/billRoom">
                                                         Hóa Đơn Đặt Phòng
                                                     </NavDropdown.Item>
-                                                    <NavDropdown.Item href="/">Hóa đơn dịch vụ</NavDropdown.Item>
+                                                    <NavDropdown.Item href="/billService">Hóa đơn dịch vụ</NavDropdown.Item>
                                                     <NavDropdown.Divider />
                                                     <NavDropdown.Item >Trả phòng</NavDropdown.Item>
                                                 </NavDropdown>    

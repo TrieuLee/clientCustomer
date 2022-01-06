@@ -8,6 +8,7 @@ function UserContextProvider(props) {
     const [userAddress, setUserAddress] = useState(undefined);
     const [userEmail, setUserEmail] = useState(undefined);
     const [userPhone, setUserPhone] = useState(undefined);
+    const [IDCard, setIDCard] = useState(undefined);
 
     
     async function getUser(){
@@ -17,6 +18,7 @@ function UserContextProvider(props) {
        setUserAddress(userRes.data?userRes.data.address:null);
        setUserEmail(userRes.data?userRes.data.email:null);
        setUserPhone(userRes.data?userRes.data.phoneNumber:null);
+       setIDCard(userRes.data?userRes.data.IDCard:null);
    }
 
    useEffect(() => {
@@ -28,6 +30,7 @@ function UserContextProvider(props) {
             userAddress,
             userEmail,
             userPhone,
+            IDCard,
             getUser
         }}>{props.children}</UserContext.Provider>
    );

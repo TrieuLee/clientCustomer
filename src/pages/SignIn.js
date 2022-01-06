@@ -1,6 +1,5 @@
 import React, {useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import Menu from './Menu';
 import ErrorMessage from '../component/error-message/errorMessage.js';
 import UserContext from '../context/UserContext';
 import { useHistory } from 'react-router-dom';
@@ -34,9 +33,7 @@ const SignIn = () => {
 	}
 
     return (
-        <>
-        <Menu/>
-        
+        <>      
         <section className="sign-in">
                 <div className="container mt-5">
                     <div className="signin-content">

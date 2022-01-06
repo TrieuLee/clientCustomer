@@ -7,8 +7,11 @@ import SignUp from './pages/SignUp';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {UserContextProvider} from './context/UserContext';
 import 'bootstrap/dist/css/bootstrap.css';
-import Reservation from './pages/Reservation';
 import BookRoom from './component/BookRoom/roomList';
+import BookService from './component/BookService/serviceList';
+import BillRoom from './component/BillRoom/billRoomList';
+import BillService from './component/BillService/billServiceList';
+import Menu from './pages/Menu';
 
 Axios.defaults.withCredentials = true;
 
@@ -20,10 +23,12 @@ function App() {
       <BrowserRouter>
           <Switch>
         <Route exact path="/"> <Home/> </Route>
-            <Route path="/signin"> <SignIn/> </Route>
-            <Route path="/signup"> <SignUp/> </Route>
-            <Route path="/reservation"><Reservation/></Route>
-            <Route path="/bookRoom"><BookRoom/></Route>
+            <Route path="/signin"><Menu/> <SignIn/> </Route>
+            <Route path="/signup"><Menu/> <SignUp/> </Route>
+            <Route path="/bookRoom"> <Menu/><BookRoom/></Route>
+            <Route path="/bookService"> <Menu/><BookService/></Route>
+            <Route path="/billRoom"> <Menu/><BillRoom/></Route>
+            <Route path="/billService"> <Menu/><BillService/></Route>
           </Switch>
         
       </BrowserRouter>
