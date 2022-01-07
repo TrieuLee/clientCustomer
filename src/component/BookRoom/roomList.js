@@ -24,7 +24,7 @@ function RoomList() {
 		const roomData = await Axios.get("http://localhost:5000/room/");
 
 		let sortedEmployees  = [...roomData.data];
-		sortedEmployees = sortedEmployees.filter(a => a.state===false);
+		sortedEmployees = sortedEmployees.filter(a => a.state===false && a.note!=='Đang bảo trì');
 
 		sortedEmployees = sortedEmployees.sort((a,b) =>{
 			return a.floor-b.floor;

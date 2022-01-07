@@ -29,6 +29,11 @@ function Reservation({setServiceEditOpen,editServiceData}) {
 			IDService: idService ? idService: undefined,
 			name: name ? name: undefined,
 			price: price ? price: undefined,
+            nameCus: user ? user: undefined,
+			address: userAddress ? userAddress: undefined,
+			email: userEmail ? userEmail: undefined,
+			phoneNumber: userPhone ? userPhone: undefined,
+			IDCard: IDCard ? IDCard: undefined
 		}
 
         try {

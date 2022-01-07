@@ -27,7 +27,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
             setNote(editRoomData.note ? editRoomData.note: false);
             setState(editRoomData.state ? editRoomData.state: "");
             setTypeofRoom(editRoomData.typeofRoom ? editRoomData.typeofRoom: "");
-            setIdRoom(editRoomData._id ? editRoomData._id: "");          
+            setIdRoom(editRoomData._id ? editRoomData._id: "");                   
         }
      },[editRoomData])
 
@@ -42,6 +42,11 @@ function Reservation({editRoomData,setRoomEditOpen}) {
 			price: price ? price: undefined,
 			note: note ? note: undefined,
 			typeofRoom: typeofRoom ? typeofRoom: undefined,
+			name: user ? user: undefined,
+			address: userAddress ? userAddress: undefined,
+			email: userEmail ? userEmail: undefined,
+			phoneNumber: userPhone ? userPhone: undefined,
+			IDCard: IDCard ? IDCard: undefined
 
 		}
 

@@ -16,9 +16,10 @@ function RoomList() {
 
     async function getRooms() {
 		const roomData = await Axios.get("http://localhost:5000/bookRoom/");
-
+		console.log(roomData);
 		let sortedEmployees  = [...roomData.data];
 		sortedEmployees = sortedEmployees.filter(a => a.stateGiveMoney===false);
+		console.log(roomData);
 		setRooms(sortedEmployees);	
 	}
 
