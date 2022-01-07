@@ -245,3 +245,9 @@ table {
 .bill-title{
 text-align: center;
 }
+.room-title{
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}

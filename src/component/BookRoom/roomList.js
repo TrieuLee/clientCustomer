@@ -68,28 +68,39 @@ function RoomList() {
 						<h3>Phòng đã được đặt hết. Vui lòng liên hệ lễ tân để được hỗ trợ.</h3></>
 					)
 				}
+				<>
 				{
 					user!==null && rooms.length > 0 && (
-						<table className="table table-striped table-hover">
-						<thead>
-							<tr>
-								<th>Tầng</th>
-								<th>Số phòng</th>
-								<th>Giá phòng</th>
-								<th>Loại phòng</th>
-								<th>Tình trạng phòng</th>
-								<th>Ghi chú</th>
-								<th>Thao tác</th>
-							</tr>
-						</thead>
-						<tbody>
-							{rooms.length > 0 ? renderEmployees() : (
-								<h3>Không có dữ liệu</h3>
-							)}
-						</tbody>
-					</table>
+						<div className=''>
+							<div className='room-title'>
+								<h2>Xin mời quý khách lựa chọn phòng</h2>
+							</div>
+							<table className="table table-striped table-hover">
+							
+							<thead>
+								<tr>
+									<th>Tầng</th>
+									<th>Số phòng</th>
+									<th>Giá phòng</th>
+									<th>Loại phòng</th>
+									<th>Tình trạng phòng</th>
+									<th>Ghi chú</th>
+									<th>Thao tác</th>
+								</tr>
+							</thead>
+							<tbody>
+								{rooms.length > 0 ? renderEmployees() : (
+									<h3>Không có dữ liệu</h3>
+								)}
+							</tbody>
+						</table>
+						</div>
+						
 					)
 				}
+				</>
+
+				
 			</>
 		)
 	}

@@ -11,6 +11,8 @@ function Room({room,getRooms,editRoom}) {
     }
 
     return (
+        <>
+    
         <tr>
             <td>{room.floor}</td>
             <td>{room.number}</td>
@@ -22,6 +24,8 @@ function Room({room,getRooms,editRoom}) {
                 <a onClick={() => editRoom(room)} href="#editEmployeeModal" className="edit" data-toggle="modal"><i class="fas fa-concierge-bell"></i>Đặt phòng</a>
             </td>
         </tr>
+        </>
+       
         
     );
 }

@@ -16,8 +16,8 @@ function Room({service,getServices,editService}) {
             <td>{service.name}</td>
             <td>{service.price}</td>
             <td>
-                <a onClick={() => editService(service)} href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <a onClick={deleteEmployee} href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                <a style={{textAlign:'center', color:'orange    '}} onClick={() => editService(service)} >Đặt dịch vụ</a>
+              
             </td>
         </tr>
         

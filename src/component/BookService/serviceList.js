@@ -77,9 +77,14 @@ function RoomList() {
 							<h3>Dịch vụ hiện tại không khả dụng. Vui lòng liên hệ lễ tân đẽ được hướng dẫn chi tiết</h3></>
 						)
 						}
+						<>
 						{
 						user!==null && services.length > 0 && (
-							<table className="table table-striped table-hover">
+							<div>
+								<div className='room-title'>
+								<h2>Xin mời quý khách lựa chọn dịch vụ</h2>
+							</div>
+								<table className="table table-striped table-hover">
 							<thead>
 								<tr>
 									<th>Tên dịch vụ</th>
@@ -92,9 +97,14 @@ function RoomList() {
 									<h3>Không có dữ liệu</h3>
 								)}
 							</tbody>
-						</table>
-						)
+						</table>	
+							</div>
+							
+						)	
+					
+						
 					}
+						</>
 			   </>	
 		   )
 	   }
