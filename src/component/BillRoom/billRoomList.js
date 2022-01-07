@@ -40,7 +40,7 @@ function RoomList() {
           user!==null && (
               <>
               {rooms.length > 0 ? renderEmployees() : (
-					<h3>Bạn chưa thuê Phòng. Hãy đặt phòng yêu thích của bạn.</h3>
+					<h3>Bạn chưa thuê phòng. Hãy đặt phòng yêu thích của bạn.</h3>
 				)}</>
           )
       }

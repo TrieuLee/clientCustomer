@@ -24,10 +24,15 @@ function Room({room}) {
 	}
     return (
 		<>
-		{errorMessage && (
+		<div className='container mt-5 mb-5'>
+			<div className='tblBill'>
+			{errorMessage && (
 				<ErrorMessage
 				message={errorMessage}/>
 		)}
+		<div>
+            <h2 className="bill-title">Hóa đơn dịch vụ</h2>
+            </div>
 			<table>
 				<tr>
 					<th>Tên dịch vụ: </th>
@@ -51,6 +56,7 @@ function Room({room}) {
 				</tr>
 					
 			</table>
+			<div className='btn-confirm1'>
 			<Button
 				color="danger"
 				outline
@@ -58,6 +64,11 @@ function Room({room}) {
 				onClick={saveRoom}  >
 				Thanh Toán
 			</Button>
+			</div>
+			
+			</div>
+		</div>
+		
 		</>
     );
 }

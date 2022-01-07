@@ -136,10 +136,12 @@
 }
 .reservation-form{
     border: 1px solid black;
+    background-color: wheat;
+    height: 70%;
 }
 .info-form{
     border: 1px solid black;
-    
+    background-color: wheat;
 }
 .pickDate{
     display: flex;
@@ -209,3 +211,37 @@ table {
     text-align: left;
     padding: 8px;
   }
+.lblColor{
+    color: black;
+    font-weight: bold;
+}
+.error-message p {
+    color: red;
+    font-weight: bold;
+}
+.tblBill{
+    background-color: lemonchiffon;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top:50px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.tblBill table{
+    margin-left: 170px;
+    margin-right: 170px;
+}
+.btn-confirm1{
+
+    margin-top: 50px;
+}
+.btn-confirm1 .btn{
+    width: 50%;
+    margin-left: 300px;
+    margin-right: 300px;
+
+}
+
+.bill-title{
+text-align: center;
+}

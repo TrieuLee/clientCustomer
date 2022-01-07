@@ -65,7 +65,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                 <form className="re_form" >
                     {/* Họ tên khách hàng */}
                     <div className="form-group">
-                        <label htmlFor="name">
+                        <label className="lblIcon" htmlFor="name">
                         <i class="zmdi zmdi-account material-icons-name"></i>
 
                         </label>
@@ -78,7 +78,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                         
                     {/* Số điện thoại */}
                     <div className="form-group">
-                    <label htmlFor="phone">
+                    <label className="lblIcon" htmlFor="phone">
                         <i class="zmdi zmdi-phone material-icons-name"></i>
 
                     </label>
@@ -91,7 +91,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                 
                 {/* Địa chỉ */}
                 <div className="form-group">
-                    <label htmlFor="phone">
+                    <label className="lblIcon" htmlFor="phone">
                         <i class="zmdi zmdi-pin material-icons-name"></i>
 
                     </label>
@@ -102,7 +102,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                     />
                 </div> 
                 <div className="form-group">
-                    <label htmlFor="name">
+                    <label  className="lblIcon" htmlFor="name">
                         <i class="zmdi zmdi-info material-icons-name"></i>
 
                     </label>
@@ -113,7 +113,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                     />
                 </div>  
                 <div className="form-group">
-                    <label htmlFor="name">
+                    <label className="lblIcon" htmlFor="name">
                         <i class="zmdi zmdi-info material-icons-name"></i>
 
                     </label>
@@ -126,10 +126,10 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                 </form>                       
                 </div>
                     <div className="info-form">
-                <h2 className="form-title1">Thông tin Dịch vụ</h2>
+                <h2 className="form-title1">Thông tin dịch vụ</h2>
                 <form className="re_form" onSubmit={saveRoom} >
                     <div >
-                        <label htmlFor ='number'>Tên dịch vụ</label>
+                        <label className="lblColor" htmlFor ='number'>Tên dịch vụ</label>
                         <input id = 'number' 
                         type = 'text'
                         value={name}
@@ -139,7 +139,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                         />
                     </div>
                     <div>
-                        <label htmlFor ='floor'>Giá dịch vụ</label>
+                        <label className="lblColor" htmlFor ='floor'>Giá dịch vụ</label>
                         <input id = 'floor' 
                         type = 'number' 
                         value={price}
@@ -149,7 +149,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                         />
                     </div>
                     <div>
-                        <label htmlFor ='note'>Số lượng</label>
+                        <label className="lblColor"htmlFor ='note'>Số lượng</label>
                         <input id = 'note' 
                         type = 'number' 
                         value={quantity}

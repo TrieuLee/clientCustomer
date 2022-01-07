@@ -25,51 +25,66 @@ function Room({room}) {
     return (
         <>
 
+			<div className="container mt-5 mb-5">	
+				
+			<div className='tblBill'>
 			{errorMessage && (
 				<ErrorMessage
 				message={errorMessage}/>
 			)}
+			<div>
+            <h2 className="bill-title">Hóa đơn của khách hàng</h2>
+            </div>
 			<table>
 				<tr>
-					<th>Số Phòng: </th>
+					<th>Số phòng: </th>
 					<td>{room.number}</td>
 				</tr>
 				<tr>
-					<th>Tầng</th>
+					<th>Tầng:</th>
 					<td>{room.floor}</td>
 				</tr>
 				<tr>
-					<th>Giá</th>
+					<th>Giá:</th>
 					<td>{room.price}</td>
 				</tr>
 				<tr>
-					<th>Loại Phòng</th>
+					<th>Loại phòng:</th>
 					<td>{room.typeofRoom}</td>
 				</tr>
 				<tr>
-					<th>Ngày thuê</th>
+					<th>Ngày thuê:</th>
 					<td>{room.checkIn}</td>
 				</tr>
 				<tr>
-					<th>Ngày trả phòng</th>
+					<th>Ngày trả phòng:</th>
 					<td>{room.checkOut}</td>
 				</tr>
 				<tr>
-					<th>Tổng tiền</th>
+					<th>Tổng tiền:</th>
 					<td>{room.price*(parseInt(room.checkOut.slice(8))-parseInt(room.checkIn.slice(8)))}</td>
 				</tr>
 				<tr>
-					<th>Tình trạng thanh toán</th>
+					<th>Tình trạng thanh toán:</th>
 					<td>{room.stateGiveMoney?'Đã thanh toán':'Chưa thanh toán'}</td>
 				</tr>
 			</table>
-			<Button
+			<div className='btn-confirm1'>
+			<Button 
+				width='2000'
 				color="danger"
 				outline
 				type="button"
 				onClick={saveRoom}  >
-				Thanh Toán
-			</Button>
+				Thanh toán
+			</Button>		
+			</div>
+		
+			</div>
+				</div>
+			
+		
+			
 		</>
         
     );

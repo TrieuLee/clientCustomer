@@ -145,7 +145,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                 <h2 className="form-title1">Thông tin loại phòng</h2>
                 <form className="re_form" onSubmit={saveRoom} >
                     <div >
-                        <label htmlFor ='number'>Số Phòng</label>
+                        <label className="lblColor" htmlFor ='number'>Số Phòng</label>
                         <input id = 'number' 
                         type = 'number'
                         value={number}
@@ -155,7 +155,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                         />
                     </div>
                     <div>
-                        <label htmlFor ='floor'>Tầng</label>
+                        <label className="lblColor" htmlFor ='floor'>Tầng</label>
                         <input id = 'floor' 
                         type = 'number' 
                         value={floor}
@@ -165,7 +165,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                         />
                     </div>
                     <div>
-                        <label htmlFor ='price'>Giá Phòng</label>
+                        <label className="lblColor" htmlFor ='price'>Giá Phòng</label>
                         <input id = 'price' 
                         type = 'number' 
                         value={price}
@@ -175,7 +175,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                         />
                     </div>
                     <div>
-                        <label htmlFor ='note'>Ghi Chú</label>
+                        <label className="lblColor" htmlFor ='note'>Ghi Chú</label>
                         <input id = 'note' 
                         type = 'text' 
                         value={note}
@@ -185,7 +185,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                         />
                     </div>
                     <div>
-                        <label htmlFor ='state'>Tình trạng phòng</label>
+                        <label className="lblColor" htmlFor ='state'>Tình trạng phòng</label>
                         <input id = 'state' 
                         type = 'text' 
                         value={state?"Có khách thuê":"Phòng trống"}
@@ -195,7 +195,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                         />
                     </div>
                     <div>
-                        <label htmlFor ='typeofRoom'>Loại phòng</label>
+                        <label className="lblColor" htmlFor ='typeofRoom'>Loại phòng</label>
                         <input id = 'typeofRoom' 
                         type = 'text' 
                         value={typeofRoom}
@@ -205,7 +205,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                         />
                     </div>
                     <div>
-                        <label htmlFor ='typeofRoom'>Ngày thuê</label>
+                        <label className="lblColor" htmlFor ='typeofRoom'>Ngày thuê</label>
                         <input id = 'typeofRoom' 
                         type = 'date' 
                         value={checkIn}
@@ -215,7 +215,7 @@ function Reservation({editRoomData,setRoomEditOpen}) {
                         />
                     </div>
                     <div>
-                        <label htmlFor ='typeofRoom'>Ngày trả phòng</label>
+                        <label className="lblColor" htmlFor ='typeofRoom'>Ngày trả phòng</label>
                         <input id = 'typeofRoom' 
                         type = 'date' 
                         value={checkOut}
