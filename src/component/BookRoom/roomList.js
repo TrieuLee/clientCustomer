@@ -1,6 +1,5 @@
 import React, {useContext, useEffect, useState } from 'react';
 import Axios from 'axios';
-import Modal from 'react-modal';
 
 import RoomPut from './Reservation';
 import UserContext from '../../context/UserContext';
