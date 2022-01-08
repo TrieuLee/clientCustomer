@@ -23,8 +23,19 @@ function RoomList() {
 		const roomData = await Axios.get("http://localhost:5000/room/");
 
 		let sortedEmployees  = [...roomData.data];
-		sortedEmployees = sortedEmployees.filter(a => a.state===false && a.note!=='Đang bảo trì');
-
+		const href =window.location.href;
+		if(href==="http://localhost:3000/bookRoom") {
+			sortedEmployees = sortedEmployees.filter(a => a.state===false && a.note!=='Đang bảo trì');
+		}
+		else if(href ==="http://localhost:3000/bookRoom/thuongDon"){
+			sortedEmployees = sortedEmployees.filter(a => a.state===false && a.note!=='Đang bảo trì' && a.typeofRoom==="Phòng đơn");
+		}else if(href ==="http://localhost:3000/bookRoom/thuongDoi"){
+			sortedEmployees = sortedEmployees.filter(a => a.state===false && a.note!=='Đang bảo trì' && a.typeofRoom==="Phòng đôi");
+		}else if(href ==="http://localhost:3000/bookRoom/vipDon"){
+			sortedEmployees = sortedEmployees.filter(a => a.state===false && a.note!=='Đang bảo trì' && a.typeofRoom==="VIP đơn");
+		}else{	
+			sortedEmployees = sortedEmployees.filter(a => a.state===false && a.note!=='Đang bảo trì' && a.typeofRoom==="VIP đôi");
+		}
 		sortedEmployees = sortedEmployees.sort((a,b) =>{
 			return a.floor-b.floor;
 		})

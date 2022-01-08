@@ -72,13 +72,11 @@ export default function Home() {
                         <div className="col-xl-5 col-lg-4 d-none d-lg-block">
                             <div className="book_room">
                                 <div className="nav-introCus">
-                                    {user ===null && 
-                                        <Link to ="/signup" element={ <SignIn />}>Tạo tài khoản</Link>
-                                    }                                  
-                                </div>
-                                <div className="nav-introCus">
                                     {user ===null?(
-                                         <Link to ="/signin" element={ <SignIn/>}>Đăng nhập</Link>    
+                                        <>
+                                            <Link className="auth A" to ="/signup" element={ <SignIn />}>Tạo tài khoản</Link>
+                                            <Link className="auth B" to ="/signin" element={ <SignIn/>}>Đăng nhập</Link>
+                                        </>                                             
                                     ):(
                                         user && (<>
                                              <NavDropdown
@@ -233,9 +231,9 @@ export default function Home() {
                     <div className="room_heading d-flex justify-content-between align-items-center">
                         <div className="room_heading_inner">
                             <span>From $250/night</span>
-                            <h3>Thường đơn</h3>
+                            <h3>Phòng Đơn</h3>
                         </div>
-                        <a href="/" className="line-button">Đặt phòng</a>
+                        <a href="/bookRoom/thuongDon" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
@@ -245,9 +243,9 @@ export default function Home() {
                     <div className="room_heading d-flex justify-content-between align-items-center">
                         <div className="room_heading_inner">
                             <span>From $250/night</span>
-                            <h3>Thường đôi</h3>
+                            <h3>Phòng Đôi</h3>
                         </div>
-                        <a href="/" className="line-button">Đặt phòng</a>
+                        <a href="/bookRoom/thuongDoi" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
@@ -257,9 +255,9 @@ export default function Home() {
                     <div className="room_heading d-flex justify-content-between align-items-center">
                         <div className="room_heading_inner">
                             <span>From $250/night</span>
-                            <h3>VIP đơn</h3>
+                            <h3>VIP Đơn</h3>
                         </div>
-                        <a href="/" className="line-button">Đặt phòng</a>
+                        <a href="/bookRoom/vipDon" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
@@ -269,9 +267,9 @@ export default function Home() {
                     <div className="room_heading d-flex justify-content-between align-items-center">
                         <div className="room_heading_inner">
                             <span>From $250/night</span>
-                            <h3>VIP đôi</h3>
+                            <h3>VIP Đôi</h3>
                         </div>
-                        <a href="/" className="line-button">Đặt phòng</a>
+                        <a href="/bookRoom/vipDoi" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>

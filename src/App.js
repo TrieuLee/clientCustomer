@@ -1,5 +1,5 @@
 import Axios from 'axios';
-
+import React, {useState} from 'react';
 import './App.css';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
@@ -24,21 +24,21 @@ function App() {
 
       <BrowserRouter>
           <Switch>
-        <Route exact path="/"> <Home/> </Route>
-
-
-
-            <Route path="/signin"><Menu/> <SignIn/> </Route>
-            <Route path="/signup"><Menu/> <SignUp/> </Route>
-            <Route path="/bookRoom"> <Menu/><BookRoom/></Route>
-            <Route path="/bookService"> <Menu/><BookService/></Route>
-            <Route path="/billRoom"> <Menu/><BillRoom/></Route>
-            <Route path="/billService"> <Menu/><BillService/></Route>
-            <Route path="/signin"> <SignIn/> </Route>
-            <Route path="/signup"> <SignUp/> </Route>
-            <Route path="/service"><Service/> </Route>
-            <Route path="/changePassword"><ChangePass/> </Route>
-
+            <Route exact path="/"> <Home/> </Route>
+                <Route path="/signin"><Menu/> <SignIn/> </Route>
+                <Route path="/signup"><Menu/> <SignUp/> </Route>
+                <Route path="/bookRoom"> <Menu/><BookRoom /></Route>
+                <Route path="/bookRoom/thuongDon"><Menu/><BookRoom/></Route>
+                <Route path="/bookRoom/thuongDoi"><Menu/><BookRoom/></Route>
+                <Route path="/bookRoom/vipDon"><Menu/><BookRoom/></Route>
+                <Route path="/bookRoom/vipDoi"><Menu/><BookRoom/></Route>
+                <Route path="/bookService"> <Menu/><BookService/></Route>
+                <Route path="/billRoom"> <Menu/><BillRoom/></Route>
+                <Route path="/billService"> <Menu/><BillService/></Route>
+                <Route path="/signup"> <SignUp/> </Route>
+                <Route path="/service"><Service/> </Route>
+                <Route path="/changePassword"><ChangePass/>
+             </Route>
           </Switch>
         
       </BrowserRouter>

@@ -39,7 +39,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
         try {
             await Axios.post("http://localhost:5000/bookService",roomData); 
 
-            if(window.confirm(`Cảm ơn bạn đã sử dùng sản phẩm ${!name?"":name} của chúng tôi. Chúng tôi sẽ mang lên Phòng cho bạn sau 5 phút nữa.`)){       
+            if(window.confirm(`Cảm ơn bạn đã sử dùng sản phẩm ${!name?"":name} của chúng tôi. Chúc bạn 1 ngày vui vẻ.`)){       
                 history.push("/");
             } 
         } catch (err) {
@@ -167,7 +167,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                             type="submit"
                             color="success"
                             outline>
-                            Tạo mới
+                            Thuê dịch vụ
                         </Button>
                         <Button
                             color="danger"

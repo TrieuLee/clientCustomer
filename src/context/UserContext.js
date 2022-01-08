@@ -13,7 +13,6 @@ function UserContextProvider(props) {
     
     async function getUser(){
        const userRes = await Axios.get("http://localhost:5000/customer/loggedIn");
-       console.log(userRes.data);
        setUser(userRes.data?userRes.data.name:null);
        setUserAddress(userRes.data?userRes.data.address:null);
        setUserEmail(userRes.data?userRes.data.email:null);

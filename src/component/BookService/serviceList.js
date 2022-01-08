@@ -41,8 +41,7 @@ function RoomList() {
 
 	function editService(employeeData) {
 		setEditServiceData(employeeData);
-		setServiceEditOpen(true);
-		console.log(employeeData);	
+		setServiceEditOpen(true);	
 	}
 
 	const customStyles = {
