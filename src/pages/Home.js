@@ -1,11 +1,12 @@
-import React, {useContext,useState } from 'react';
+import React, {useContext} from 'react';
 import UserContext from '../context/UserContext';
 import { NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import SignIn from './SignIn';
 import Axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import RoomList from '../component/BookRoom/roomList';
+import './comStyle.css'
+
 
 export default function Home() {
     const {getUser, user} = useContext(UserContext);
@@ -56,7 +57,7 @@ export default function Home() {
                                        
                                         </>                                    
                                     }
-                                        <li><button className="btn_footer" href="about.html" >Về chúng tôi</button></li>                                                                           
+                                        <li><a href="#footer_top">Về chúng tôi</a></li>                                                                           
                                     </ul>
                                 </nav>
                             </div>
@@ -70,18 +71,13 @@ export default function Home() {
                         </div>
                         <div className="col-xl-5 col-lg-4 d-none d-lg-block">
                             <div className="book_room">
-                                <div className="book_btn d-none d-lg-block">
-            
-                                    
-                                    {user !==null? 
-                                       <Link to ="/bookRoom" element={<RoomList/>} >Đặt phòng</Link>
-                                    :
-                                    <Link to ="/signup" element={ <SignIn />}>Tạo tài khoản</Link>
-                                }
-                                    
+                                <div className="nav-introCus">
+                                    {user ===null && 
+                                        <Link to ="/signup" element={ <SignIn />}>Tạo tài khoản</Link>
+                                    }                                  
                                 </div>
-                                <div className="book_btn d-none d-lg-block">
-                                    {user ==null?(
+                                <div className="nav-introCus">
+                                    {user ===null?(
                                          <Link to ="/signin" element={ <SignIn/>}>Đăng nhập</Link>    
                                     ):(
                                         user && (<>
@@ -284,7 +280,7 @@ export default function Home() {
     
 
     <footer  className="footer" style={{marginTop: '300px'}}>
-        <div className="footer_top">
+        <div className="footer_top" id="footer_top" >
             <div className="container">
                 <div className="row">
                     <div className="col-xl-3 col-md-6 col-lg-3">

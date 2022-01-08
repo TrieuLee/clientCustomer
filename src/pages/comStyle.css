@@ -1,0 +1,19 @@
+.dropdown-menu-dark {
+    color: #dee2e6;
+    background-color: rgba(0,0,0,0.7)!important;
+}
+.nav-introCus {
+    font-weight: 600;
+    color: white;
+    border: 1px solid;
+    margin-top: -25px;
+    transition: all 0.75s ease;
+}
+#nav-dropdown-dark-example:hover{
+    text-decoration: none;
+    color: white;
+}
+#nav-dropdown-dark-example:focus{
+    text-decoration: none;
+    color: white;
+}

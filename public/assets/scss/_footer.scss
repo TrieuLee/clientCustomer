@@ -7,6 +7,7 @@
             padding-top: 60px;
             padding-bottom: 30px;
         }
+        scroll-behavior: smool;
         .footer_widget{
             @media #{$mobile_device} {
                 margin-bottom: 30px;
