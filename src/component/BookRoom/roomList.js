@@ -94,12 +94,10 @@ function RoomList() {
 								)}
 							</tbody>
 						</table>
-						</div>
-						
+						</div>						
 					)
 				}
 				</>
-
 				
 			</>
 		)
