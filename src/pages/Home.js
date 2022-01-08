@@ -6,11 +6,9 @@ import SignIn from './SignIn';
 import Axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import RoomList from '../component/BookRoom/roomList';
-import ChangPass from './changePassWord';
 
 export default function Home() {
     const {getUser, user} = useContext(UserContext);
-    const [openEditPassword, setOpenEditPassword] = useState(false);
     const history = useHistory();
 
     async function resetPassword(){
@@ -97,7 +95,7 @@ export default function Home() {
                                                  </NavDropdown.Item>
                                                  <NavDropdown.Item onClick={logOut} href="/">Đăng Xuất</NavDropdown.Item>
                                                  <NavDropdown.Item href="/changePassword"
-                                                 onClick={() => setOpenEditPassword(true)}
+                                                 
                                                  >
                                                      Đổi Mật Khẩu
                                                  </NavDropdown.Item>

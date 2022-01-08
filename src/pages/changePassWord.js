@@ -41,14 +41,6 @@ function Name() {
         }
 		
 	}
-
-	function closeEmployee(){
-        setCreateEmail("");
-        setCurrentPass("")
-        setCreatePassword("");
-        setCreatePasswordVerify("");
-	}
-
    return (
     <div onClick={()=>setErrorMessage(null)} className= "employee-post" >
     <section className="reservation">
