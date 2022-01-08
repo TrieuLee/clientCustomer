@@ -1,4 +1,4 @@
-import React, {useContext } from 'react';
+import React, {useContext,useState } from 'react';
 import UserContext from '../context/UserContext';
 import { NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -10,13 +10,20 @@ import RoomList from '../component/BookRoom/roomList';
 export default function Home() {
     const {getUser, user} = useContext(UserContext);
     const history = useHistory();
+    const [openEditPassword, setOpenEditPassword] = useState(false);
+
+    async function resetPassword(){
+        if(window.confirm('Mật khẩu mới của bạn là: 123456. Đề nghị thay đổi mật khẩu để đảm bảo an toàn')){
+            await Axios.put("http://localhost:5000/staff/reset/password");
+        }
+    }
 
     async function logOut(){
         await Axios.get("http://localhost:5000/customer/logOut");
         await getUser();
         history.push("/"); 
     }
-
+   
     return (
         <>
 <header>
@@ -40,7 +47,7 @@ export default function Home() {
                                                 menuVariant="dark"
                                                 >
                                                     <NavDropdown.Item href="/billRoom">
-                                                        Hóa Đơn Đặt Phòng
+                                                        Hóa đơn đặt phòng
                                                     </NavDropdown.Item>
                                                     <NavDropdown.Item href="/billService">Hóa đơn dịch vụ</NavDropdown.Item>
                                                     <NavDropdown.Divider />
@@ -50,7 +57,7 @@ export default function Home() {
                                        
                                         </>                                    
                                     }
-                                        <li><button href="about.html" >Về chúng tôi</button></li>                                                                           
+                                        <li><button className="btn_footer" href="about.html" >Về chúng tôi</button></li>                                                                           
                                     </ul>
                                 </nav>
                             </div>
@@ -75,10 +82,30 @@ export default function Home() {
                                     
                                 </div>
                                 <div className="book_btn d-none d-lg-block">
-                                    {user !==null? 
-                                       <Link to ="/signin" onClick={logOut} href="/" >Đăng Xuất</Link>
-                                    :
-                                    <Link to ="/signin" element={ <SignIn/>}>Đăng nhập</Link>
+                                    {user ==null?(
+                                         <Link to ="/signin" element={ <SignIn/>}>Đăng nhập</Link>    
+                                    ):(
+                                        user && (<>
+                                             <NavDropdown
+                                             id="nav-dropdown-dark-example"
+                                             title= {"Xin Chào, "+ user}
+                                             menuVariant="dark"
+                                             >
+                                                 <NavDropdown.Item href="/">
+                                                     Trang chủ
+                                                 </NavDropdown.Item>
+                                                 <NavDropdown.Item onClick={logOut} href="/">Đăng Xuất</NavDropdown.Item>
+                                                 <NavDropdown.Item href="#action/3.4"
+                                                 onClick={() => setOpenEditPassword(true)}
+                                                 >
+                                                     Đổi Mật Khẩu
+                                                 </NavDropdown.Item>
+                                                 <NavDropdown.Divider />
+                                                 <NavDropdown.Item href="/" onClick={resetPassword}>Quên Mật Khẩu</NavDropdown.Item>
+                                             </NavDropdown>
+                                        
+                                        </>)
+                                    )
                                 }
                                     
                                 </div>
@@ -257,7 +284,7 @@ export default function Home() {
     </div>
     
 
-    <footer className="footer" style={{marginTop: '300px'}}>
+    <footer  className="footer" style={{marginTop: '300px'}}>
         <div className="footer_top">
             <div className="container">
                 <div className="row">
