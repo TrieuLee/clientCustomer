@@ -13,6 +13,7 @@ import BillRoom from './component/BillRoom/billRoomList';
 import BillService from './component/BillService/billServiceList';
 import Menu from './pages/Menu';
 import Service from './pages/Service';
+import ChangePass from './pages/changePassWord';
 
 Axios.defaults.withCredentials = true;
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="/signin"> <SignIn/> </Route>
             <Route path="/signup"> <SignUp/> </Route>
             <Route path="/service"><Service/> </Route>
+            <Route path="/changePassword"><ChangePass/> </Route>
 
           </Switch>
         

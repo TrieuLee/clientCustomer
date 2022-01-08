@@ -26,12 +26,6 @@ export default function Home() {
     }
  
     return (
-        <>
-        {
-            openEditPassword?(
-            <ChangPass setOpenEditPassword={setOpenEditPassword}/>
-        ):
-        (
 <>
 <header>
         <div className="header-area ">
@@ -102,7 +96,7 @@ export default function Home() {
                                                      Trang chủ
                                                  </NavDropdown.Item>
                                                  <NavDropdown.Item onClick={logOut} href="/">Đăng Xuất</NavDropdown.Item>
-                                                 <NavDropdown.Item href="#action/3.4"
+                                                 <NavDropdown.Item href="/changePassword"
                                                  onClick={() => setOpenEditPassword(true)}
                                                  >
                                                      Đổi Mật Khẩu
@@ -420,9 +414,6 @@ export default function Home() {
                         </div>
                     </div>
             </form>
-        </>
-        )
-        }
         </>
     )
 }
