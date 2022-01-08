@@ -6,15 +6,16 @@ import SignIn from './SignIn';
 import Axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import RoomList from '../component/BookRoom/roomList';
+import ChangPass from './changePassWord';
 
 export default function Home() {
     const {getUser, user} = useContext(UserContext);
-    const history = useHistory();
     const [openEditPassword, setOpenEditPassword] = useState(false);
+    const history = useHistory();
 
     async function resetPassword(){
         if(window.confirm('Mật khẩu mới của bạn là: 123456. Đề nghị thay đổi mật khẩu để đảm bảo an toàn')){
-            await Axios.put("http://localhost:5000/staff/reset/password");
+            await Axios.put("http://localhost:5000/customer/reset/password");
         }
     }
 
@@ -23,9 +24,15 @@ export default function Home() {
         await getUser();
         history.push("/"); 
     }
-   
+ 
     return (
         <>
+        {
+            openEditPassword?(
+            <ChangPass setOpenEditPassword={setOpenEditPassword}/>
+        ):
+        (
+<>
 <header>
         <div className="header-area ">
             <div id="sticky-header" className="main-header-area">
@@ -103,7 +110,7 @@ export default function Home() {
                                                  <NavDropdown.Divider />
                                                  <NavDropdown.Item href="/" onClick={resetPassword}>Quên Mật Khẩu</NavDropdown.Item>
                                              </NavDropdown>
-                                        
+                                            
                                         </>)
                                     )
                                 }
@@ -413,6 +420,9 @@ export default function Home() {
                         </div>
                     </div>
             </form>
+        </>
+        )
+        }
         </>
     )
 }
