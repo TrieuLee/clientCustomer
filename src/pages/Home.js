@@ -1,4 +1,6 @@
 import React, {useContext} from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import UserContext from '../context/UserContext';
 import { NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -125,8 +127,18 @@ export default function Home() {
             </div>
         </div>
     </header>
-
-        <div className="slider_area">
+    <Carousel infiniteLoop={true} autoPlay={true} showThumbs={false} interval={3000} >
+                <div>
+                    <img alt='' src="assets/img/rooms/1.png" />
+                </div>
+                <div>
+                    <img alt='' src="assets/img/rooms/2.png" />
+                </div>
+                <div>
+                    <img alt='' src="assets/img/rooms/3.png" />
+                </div>
+            </Carousel>
+        {/* <div className="slider_area">
         <div className="slider_active owl-carousel owl-loaded owl-drag">
         <div className="owl-stage-outer"><div class="owl-stage" style={{transform:' translate3d(-4557px, 0px, 0px)', transition: 'all 0.8s ease 0s', width: '9114px'}}><div class="owl-item cloned" style={{width: '1519px'}}><div class="single_slider d-flex align-items-center justify-content-center slider_bg_1">
                 <div className="container">
@@ -195,7 +207,7 @@ export default function Home() {
                     </div>
                 </div>
             </div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="ti-angle-left"></i></div><div class="owl-next"><i class="ti-angle-right"></i></div></div><div class="owl-dots disabled"></div></div>
-    </div>
+    </div> */}
 
     <div className="about_area">
         <div className="container">

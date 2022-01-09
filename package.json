@@ -18,6 +18,7 @@
     "react-dom": "^17.0.2",
     "react-modal": "^3.14.4",
     "react-owl-carousel2": "^0.3.0",
+    "react-responsive-carousel": "^3.2.22",
     "react-router-dom": "^5.3.0",
     "react-scripts": "5.0.0",
     "reactstrap": "^9.0.1",
