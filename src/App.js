@@ -28,10 +28,6 @@ function App() {
                 <Route path="/signin"><Menu/> <SignIn/> </Route>
                 <Route path="/signup"><Menu/> <SignUp/> </Route>
                 <Route path="/bookRoom"> <Menu/><BookRoom /></Route>
-                <Route path="/bookRoom/thuongDon"><Menu/><BookRoom/></Route>
-                <Route path="/bookRoom/thuongDoi"><Menu/><BookRoom/></Route>
-                <Route path="/bookRoom/vipDon"><Menu/><BookRoom/></Route>
-                <Route path="/bookRoom/vipDoi"><Menu/><BookRoom/></Route>
                 <Route path="/bookService"> <Menu/><BookService/></Route>
                 <Route path="/billRoom"> <Menu/><BillRoom/></Route>
                 <Route path="/billService"> <Menu/><BillService/></Route>

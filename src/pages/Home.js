@@ -12,6 +12,19 @@ export default function Home() {
     const {getUser, user} = useContext(UserContext);
     const history = useHistory();
 
+    function GetTypeRoomA(){
+        localStorage.setItem('type','Phòng đơn');
+    }
+    function GetTypeRoomB(){
+        localStorage.setItem('type','Phòng đôi')
+    }
+    function GetTypeRoomC(){
+        localStorage.setItem('type','VIP đơn')
+    }
+    function GetTypeRoomD(){
+        localStorage.setItem('type','VIP đôi')
+    }
+
     async function resetPassword(){
         if(window.confirm('Mật khẩu mới của bạn là: 123456. Đề nghị thay đổi mật khẩu để đảm bảo an toàn')){
             await Axios.put("http://localhost:5000/customer/reset/password");
@@ -233,7 +246,7 @@ export default function Home() {
                             <span>From $250/night</span>
                             <h3>Phòng Đơn</h3>
                         </div>
-                        <a href="/bookRoom/thuongDon" className="line-button">Đặt phòng</a>
+                        <a onClick = {() => GetTypeRoomA()} href='/bookRoom' className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
@@ -245,7 +258,7 @@ export default function Home() {
                             <span>From $250/night</span>
                             <h3>Phòng Đôi</h3>
                         </div>
-                        <a href="/bookRoom/thuongDoi" className="line-button">Đặt phòng</a>
+                        <a onClick = {() => {GetTypeRoomB()}} href="/bookRoom" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
@@ -257,7 +270,7 @@ export default function Home() {
                             <span>From $250/night</span>
                             <h3>VIP Đơn</h3>
                         </div>
-                        <a href="/bookRoom/vipDon" className="line-button">Đặt phòng</a>
+                        <a onClick = {() => {GetTypeRoomC()}} href="/bookRoom" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
@@ -269,7 +282,7 @@ export default function Home() {
                             <span>From $250/night</span>
                             <h3>VIP Đôi</h3>
                         </div>
-                        <a href="/bookRoom/vipDoi" className="line-button">Đặt phòng</a>
+                        <a onClick = {() => {GetTypeRoomD()}} href="/bookRoom" className="line-button">Đặt phòng</a>
                     </div>
                 </div>
             </div>
