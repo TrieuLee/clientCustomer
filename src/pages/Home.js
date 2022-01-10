@@ -214,12 +214,12 @@ export default function Home() {
                 <div className="col-xl-5 col-lg-5">
                     <div className="about_info">
                         <div className="section_title mb-20px">
-                            <span>Về chúng tôi</span>
-                            <h3>Ngôi nhà Việt Nam của Quý khách</h3>
+                            <span>Phong cách Châu Âu</span>
+                            <h3>Mang Châu Âu đến gần bạn</h3>
                         </div>
                         <p>Khách sạn Del Luna là khách sạn đạt tiêu chuẩn quốc tế hàng đầu tọa lạc ngay tại trung tâm
-                        tài chính, thương mại và giải trí sầm uất của thành phố Hồ Chí Minh, cách Sân bay quốc tế Tân Sơn Nhất chỉ khoảng 8 km 
-                        đường bộ.</p>
+                        tài chính, thương mại và giải trí sầm uất của thành phố Nha Trang, thiên đường nghĩ dưỡng, với những bãi biển đẹp 
+                        </p>
                         <a href="/" className="line-button">Tìm hiểu thêm</a>
                     </div>
                 </div>
@@ -231,6 +231,35 @@ export default function Home() {
                         <div className="img_2">
                             <img src="assets/img/about/about_2.png" alt=""/>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div className="about_area">
+        <div className="container">
+            <div className="row">
+            <div className="col-xl-7 col-lg-7">
+                    <div className="about_thumb d-flex">
+                        <div className="img_1">
+                            <img src="assets/img/about/1.png" alt="" style={{width: '294px', height: '400px',}}/>
+                        </div>
+                        <div className="img_2">
+                            <img src="assets/img/about/about_2.png" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-xl-5 col-lg-5">
+                    <div className="about_info">
+                        <div className="section_title mb-20px">
+                            <span>Dịch vụ đa dạng</span>
+                            <h3>Sự hài lòng của quý khách là niềm tự hào của chúng tôi</h3>
+                        </div>
+                        <p>
+                            Chung tôi luôn nỗ lực, đổi mới để mang đến những điều tốt đẹp nhất đến quý khách hàng. Hãy để chúng tôi chăm sóc chuyến đi của bạn
+                        </p>
+                        <a href="/" className="line-button">Tìm hiểu thêm</a>
                     </div>
                 </div>
             </div>

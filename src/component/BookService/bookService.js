@@ -9,6 +9,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
     const [name,setName] = useState("");
 	const [price,setPrice] = useState(0)
 	const [quantity,setQuantity] = useState(0);
+	const [unit,setUnit] = useState("");
 	const [idService,setIDService] = useState("");
     const [errorMessage,setErrorMessage] = useState(null);
     const history = useHistory();
@@ -18,7 +19,8 @@ function Reservation({setServiceEditOpen,editServiceData}) {
             setName(editServiceData.name ? editServiceData.name: "");
             setPrice(editServiceData.price ? editServiceData.price: 0);
             setQuantity(editServiceData.quantity ? editServiceData.quantity: "");
-            setIDService(editServiceData._id ? editServiceData._id: "");          
+            setIDService(editServiceData._id ? editServiceData._id: "");     
+            setUnit(editServiceData.unit ? editServiceData.unit: "");     
         }
      },[editServiceData])
 
@@ -33,7 +35,8 @@ function Reservation({setServiceEditOpen,editServiceData}) {
 			address: userAddress ? userAddress: undefined,
 			email: userEmail ? userEmail: undefined,
 			phoneNumber: userPhone ? userPhone: undefined,
-			IDCard: IDCard ? IDCard: undefined
+			IDCard: IDCard ? IDCard: undefined,
+            unit:unit ? unit : undefined
 		}
 
         try {
@@ -147,7 +150,7 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                         <label className="lblColor" htmlFor ='floor'>Giá dịch vụ</label>
                         <input id = 'floor' 
                         type = 'number' 
-                        value={price}
+                        value={price +" /1"+ unit}
                         onChange={(e) => setPrice(e.target.value)}
                         className='roomInput'
                         readOnly

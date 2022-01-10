@@ -40,7 +40,7 @@ function Room({room}) {
 				</tr>
 				<tr>
 					<th>Giá</th>
-					<td>{room.price}</td>
+					<td>{room.price} /1{room.unit}</td>
 				</tr>
 				<tr>
 					<th>Số lượng</th>

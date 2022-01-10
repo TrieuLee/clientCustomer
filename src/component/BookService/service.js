@@ -14,9 +14,9 @@ function Room({service,getServices,editService}) {
     return (
         <tr>
             <td>{service.name}</td>
-            <td>{service.price}</td>
+            <td>{service.price}/1 {service.unit}</td>
             <td>
-                <a style={{textAlign:'center', color:'orange    '}} onClick={() => editService(service)} >Đặt dịch vụ</a>
+                <a href='#bookService' style={{textAlign:'center', color:'orange    '}} onClick={() => editService(service)} >Đặt dịch vụ</a>
               
             </td>
         </tr>
