@@ -147,17 +147,17 @@ function Reservation({setServiceEditOpen,editServiceData}) {
                         />
                     </div>
                     <div>
-                        <label className="lblColor" htmlFor ='floor'>Giá dịch vụ</label>
+                        <label className="lblColor" htmlFor ='floor'>Đơn giá /1 {unit}</label>
                         <input id = 'floor' 
                         type = 'number' 
-                        value={price +" /1"+ unit}
+                        value={price}
                         onChange={(e) => setPrice(e.target.value)}
                         className='roomInput'
                         readOnly
                         />
                     </div>
                     <div>
-                        <label className="lblColor"htmlFor ='note'>Số lượng</label>
+                        <label className="lblColor"htmlFor ='note'>Số {unit}</label>
                         <input id = 'note' 
                         type = 'number' 
                         value={quantity}
