@@ -65,8 +65,8 @@ export default function Home() {
                                                         Hóa đơn đặt phòng
                                                     </NavDropdown.Item>
                                                     <NavDropdown.Item href="/billService">Hóa đơn dịch vụ</NavDropdown.Item>
-                                                    <NavDropdown.Divider />
-                                                    <NavDropdown.Item >Trả phòng</NavDropdown.Item>
+                                             
+                                                  
                                                 </NavDropdown>    
                                         </li>   
                                        
@@ -129,14 +129,13 @@ export default function Home() {
     </header>
     <Carousel infiniteLoop={true} autoPlay={true} showThumbs={false} interval={3000} >
                 <div>
-                    <img alt='' src="assets/img/rooms/1.png" />
+                    <img alt='' src="assets/img/banner/banner2.png" />
                 </div>
                 <div>
-                    <img alt='' src="assets/img/rooms/2.png" />
+                    <img alt='' src="assets/img/banner/about_banner.png" />
+                   
                 </div>
-                <div>
-                    <img alt='' src="assets/img/rooms/3.png" />
-                </div>
+               
             </Carousel>
         {/* <div className="slider_area">
         <div className="slider_active owl-carousel owl-loaded owl-drag">
@@ -255,7 +254,7 @@ export default function Home() {
                     <img src="assets/img/rooms/1.png" alt=""/>
                     <div className="room_heading d-flex justify-content-between align-items-center">
                         <div className="room_heading_inner">
-                            <span>From $250/night</span>
+                           l
                             <h3>Phòng Đơn</h3>
                         </div>
                         <a onClick = {() => GetTypeRoomA()} href='/bookRoom' className="line-button">Đặt phòng</a>
@@ -267,7 +266,7 @@ export default function Home() {
                     <img src="assets/img/rooms/2.png" alt=""/>
                     <div className="room_heading d-flex justify-content-between align-items-center">
                         <div className="room_heading_inner">
-                            <span>From $250/night</span>
+                            
                             <h3>Phòng Đôi</h3>
                         </div>
                         <a onClick = {() => {GetTypeRoomB()}} href="/bookRoom" className="line-button">Đặt phòng</a>
@@ -279,7 +278,7 @@ export default function Home() {
                     <img src="assets/img/rooms/3.png" alt=""/>
                     <div className="room_heading d-flex justify-content-between align-items-center">
                         <div className="room_heading_inner">
-                            <span>From $250/night</span>
+                            
                             <h3>VIP Đơn</h3>
                         </div>
                         <a onClick = {() => {GetTypeRoomC()}} href="/bookRoom" className="line-button">Đặt phòng</a>
@@ -291,7 +290,7 @@ export default function Home() {
                     <img src="assets/img/rooms/4.png" alt=""/>
                     <div className="room_heading d-flex justify-content-between align-items-center">
                         <div className="room_heading_inner">
-                            <span>From $250/night</span>
+                            
                             <h3>VIP Đôi</h3>
                         </div>
                         <a onClick = {() => {GetTypeRoomD()}} href="/bookRoom" className="line-button">Đặt phòng</a>
@@ -320,33 +319,32 @@ export default function Home() {
                             <h3 className="footer_title">
                                 Liên hệ đặt phòng
                             </h3>
-                            <p className="footer_text">+10 367 267 2678 <br/>
-                                reservation@montana.com</p>
+                            <p className="footer_text">828 Sư Vạn Hạnh, Phường 13, Quận 10, TP.HCM</p>
                         </div>
                     </div>
                     <div className="col-xl-2 col-md-6 col-lg-2">
                         <div className="footer_widget">
                             <h3 className="footer_title">
-                                Navigation
+                                Thanh điều hướng
                             </h3>
                             <ul>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/">Rooms</a></li>
-                                <li><a href="/">About</a></li>
-                                <li><a href="/">News</a></li>
+                                <li><a href="/">Trang chủ</a></li>
+                                <li><a href="/">Đặt phòng</a></li>
+                                <li><a href="/">Đặt dịch vụ</a></li>
+                                <li><a href="/">Thanh toán</a></li>
                             </ul>
                         </div>
                     </div>
                     <div className="col-xl-4 col-md-6 col-lg-4">
                         <div className="footer_widget">
                             <h3 className="footer_title">
-                                Newsletter
+                                Nhập email để nhận tin tức ưu đãi
                             </h3>
                             <form action="#" className="newsletter_form">
                                 <input type="text" placeholder="Enter your mail"/>
                                 <button type="submit">Sign Up</button>
                             </form>
-                            <p className="newsletter_text">Subscribe newsletter to get updates</p>
+                            <p className="newsletter_text">Nhận tin tức ưu đãi</p>
                         </div>
                     </div>
                 </div>
